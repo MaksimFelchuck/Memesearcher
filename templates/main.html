@@ -1,17 +1,23 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memesearcher</title>
 </head>
+
 <body>
     <h1>Meme searcher!</h1> <br>
-    <a class="action" href="{{ url_for('meme.meme') }}">Create</a>
-    <a class="action" href="{{ url_for('home') }}">Main</a>
-    
+    <ul>
+        <li><a class="action" href="{{ url_for('meme.random_memes') }}">Random memes!</a></li>
+        <li><a class="action" href="{{ url_for('meme.meme') }}">Create</a></li>
+        <li><a class="action" href="{{ url_for('meme.all_memes') }}">Meme list</a></li>
+        <li><a class="action" href="{{ url_for('home') }}">Main</a></li>
+    </ul>
     {% block content %}
-        
+
     {% endblock %}
 </body>
+
 </html>
